@@ -2,7 +2,7 @@ SELECT *
 FROM DBO.NashvilleHousing
 
 
--- Standardizing the Date Format
+-- Standardizing the Date Format to remove unnecessary times
 SELECT SaleDateConverted, CONVERT(Date,SaleDate)
 FROM DBO.NashvilleHousing
 
@@ -103,7 +103,7 @@ SELECT *
 FROM DBO.NashvilleHousing
 
 
--- Change Y and N to Yes and No in "Sold as Vacant" field
+-- Change 'Y' and 'N' to 'Yes' 'and 'No' in "Sold as Vacant" field
 SELECT Distinct(SoldASVacant), COUNT(SoldAsVacant)
 FROM DBO.NashvilleHousing
 Group by SoldAsVacant
@@ -150,7 +150,7 @@ SELECT *
 FROM DBO.NashvilleHousing
 
 
--- Removing Unused Columns
+-- Removing Unused Columns (OwnerAddress, TaxDistrict, PropertyAddress, SaleDate, SaleDate)
 SELECT *
 FROM DBO.NashvilleHousing
 
